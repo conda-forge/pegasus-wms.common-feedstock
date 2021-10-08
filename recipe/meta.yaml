@@ -17,11 +17,11 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.5
     - setuptools
   run:
-    - python
-    - pyyaml
+    - python >=3.5
+    - pyyaml >5.3,<5.5
 
 test:
   requires:
@@ -32,10 +32,11 @@ test:
     - Pegasus.json
     - Pegasus.yaml
   commands:
-    - pip check
+    - python -m pip check
 
 about:
   home: https://pegasus.isi.edu
+  dev_url: https://github.com/pegasus-isi/pegasus.git
   license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE

@@ -1,5 +1,5 @@
 {% set name = "pegasus-wms.common" %}
-{% set version = "5.0.0" %}
+{% set version = "5.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1b5af8affdcfd1131e54da2a161f82582f7dcce59aa8919411f7531f4316c297
+  sha256: cbd0a0ec9788d96a668dfb31c7f9120795687ced02bba6b0866ba7f8f08ceb26
 
 build:
   noarch: python
@@ -17,11 +17,11 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.5
     - setuptools
   run:
-    - python
-    - pyyaml
+    - python >=3.5
+    - pyyaml >5.3,<5.5
 
 test:
   requires:
@@ -32,10 +32,11 @@ test:
     - Pegasus.json
     - Pegasus.yaml
   commands:
-    - pip check
+    - python -m pip check
 
 about:
   home: https://pegasus.isi.edu
+  dev_url: https://github.com/pegasus-isi/pegasus.git
   license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE

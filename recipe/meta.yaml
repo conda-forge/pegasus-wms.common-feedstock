@@ -17,10 +17,10 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python >=3.6
     - setuptools
   run:
-    - python >=3.5
+    - python >=3.6
     - pyyaml >5.3
 
 test:
@@ -32,7 +32,9 @@ test:
     - Pegasus.json
     - Pegasus.yaml
   commands:
-    - python -m pip check
+    # check metadata
+    - python -m pip check pegasus.wms-common
+    - python -m pip show pegasus.wms-common
 
 about:
   home: https://pegasus.isi.edu

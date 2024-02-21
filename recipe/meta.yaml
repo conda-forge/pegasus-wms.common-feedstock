@@ -1,5 +1,5 @@
 {% set name = "pegasus-wms.common" %}
-{% set version = "5.0.6" %}
+{% set version = "5.0.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7f5d3e170e64c65c4debb7d69d6882a7c74ba83d0f69c4d04f212672eb7e51f3
+  sha256: 3a831570f75ff8fa411c8b652cb16bc75ecfb606f0a346581d2ff5c9e66b5961
 
 build:
   noarch: python

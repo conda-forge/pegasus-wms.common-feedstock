@@ -18,7 +18,8 @@ requirements:
   host:
     - pip
     - python >=3.6
-    - setuptools
+    - setuptools <69
+    - wheel
   run:
     - python >=3.6
     - pyyaml >5.3
@@ -33,7 +34,7 @@ test:
     - Pegasus.yaml
   commands:
     # check metadata
-    - python -m pip check pegasus.wms-common
+    - python -m pip check
     - python -m pip show pegasus.wms-common
 
 about:

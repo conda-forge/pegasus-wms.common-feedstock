@@ -17,16 +17,17 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
     - setuptools <69
     - wheel
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - pyyaml >5.3
 
 test:
   requires:
     - pip
+    - python {{ python_min }}
   imports:
     - Pegasus.braindump
     - Pegasus.client

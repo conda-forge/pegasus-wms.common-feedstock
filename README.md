@@ -146,4 +146,6 @@ Feedstock Maintainers
 =====================
 
 * [@duncanmmacleod](https://github.com/duncanmmacleod/)
+* [@mayani](https://github.com/mayani/)
+* [@rynge](https://github.com/rynge/)
 
